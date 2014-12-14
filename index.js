@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var iconv = require('iconv-lite');
 var program = require('commander');
 var request = require('request');
@@ -9,6 +11,12 @@ program
   .parse(process.argv);
 
 var url = program.url;
+if (!url) {
+  console.log('Error: no URL specified');
+  process.exit(1);
+  return;
+}
+
 request.get({
   url: url,
   encoding: null,
@@ -16,6 +24,11 @@ request.get({
     'User-Agent': 'curl/0.76.0'
   }
 }, function(err, res, body) {
+  if (err) {
+    console.log('Error: ' + err);
+    process.exit(1);
+    return;
+  }
   handleDeck(body);
 });
 
