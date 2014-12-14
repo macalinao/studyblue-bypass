@@ -1,6 +1,6 @@
 {
   "name": "studyblue-bypass",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Bypass StudyBlue's paywall",
   "main": "index.js",
   "scripts": {
