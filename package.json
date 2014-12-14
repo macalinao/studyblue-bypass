@@ -1,0 +1,17 @@
+{
+  "name": "studyblue-bypass",
+  "version": "0.1.0",
+  "description": "Bypass StudyBlue's paywall",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ian Macalinao <me@ian.pw>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.18.0",
+    "commander": "^2.5.0",
+    "iconv-lite": "^0.4.5",
+    "request": "^2.51.0"
+  }
+}
